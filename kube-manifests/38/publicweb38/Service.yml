@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: publicweb38-service
+  labels: 
+    app: publicweb38
+spec:
+  type: LoadBalancer
+  selector:
+    app: publicweb38
+  ports: 
+    - port: 80
+      targetPort: 8080
+

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: publicweb37-service
+  labels: 
+    app: publicweb37
+spec:
+  type: LoadBalancer
+  selector:
+    app: publicweb37
+  ports: 
+    - port: 80
+      targetPort: 8080
+
